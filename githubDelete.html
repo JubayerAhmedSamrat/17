@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="input" placeholder="Enter here ...">
+    <button id="submit">Submit</button>
+    <button id="delete">Delete</button>
+    <ul id="unorder">
+
+    </ul>
+    <script>
+        document.getElementById('submit').addEventListener('click', function (){
+            const input = document.getElementById('input');
+            const ul = document.getElementById("unorder");
+            const li = document.createElement('li');
+            const userId = input.value;
+            li.setAttribute('id', userId);
+            li.innerText = userId;
+            ul.appendChild(li);
+            input.value = '';
+            
+        })
+        document.getElementById('delete').addEventListener('click', function (){
+            const input = document.getElementById('input');
+            const ul = document.getElementById('unorder');
+            const userId = input.value;
+            const list = document.getElementById(userId);
+            ul.removeChild(list);
+        })
+    </script>
+</body>
+</html>

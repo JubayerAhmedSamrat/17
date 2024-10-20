@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        input, p{
+            display: inline;
+        }
+    </style>
+  </head>
+  <body>
+    <input type="number" name="" id="first" />
+    <input type="number" name="" id="second" /> = 
+    <p id="para">0</p><br>
+
+    <button id="sum">sum</button>
+    <script>
+      document.getElementById("sum").addEventListener("click", function () {
+        const firstVal = document.getElementById("first").value;
+        const secondVal = document.getElementById("second").value;
+        const sum = parseInt(firstVal) + parseInt(secondVal);
+        const para = document.getElementById("para");
+        para.innerText = sum;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header,
+      .nav,
+      .main,
+      .first-aside,
+      .second-aside,
+      .footer {
+        border: 1px solid green;
+        background-color: bisque;
+        padding: 20px;
+      }
+      ul > li {
+        list-style: none;
+      }
+      .container{
+        display:grid;
+        grid-template-areas:
+        "header header header header"
+        "nav main main first-aside"
+        "nav main main second-aside"
+        "footer footer footer footer"
+      }
+      .header {
+        grid-area: header;
+      }
+      .nav {
+        grid-area: nav;
+      }
+      .main {
+        grid-area: main;
+      }
+      .first-aside {
+        grid-area: first-aside;
+      }
+      .second-aside {
+        grid-area: second-aside;
+      }
+      .footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>This is header.</h1>
+      </header>
+      <nav class="nav">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <main class="main">
+        <article>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum fugit
+          earum voluptatem molestias, eum ab reprehenderit dignissimos illum
+          numquam natus laboriosam facere officiis aliquid blanditiis sint
+          voluptatibus quas sequi commodi magnam, laborum consectetur delectus
+          voluptate excepturi! Provident vel officiis, eum, tenetur illo nihil,
+          ad ipsam porro commodi assumenda at ullam.
+        </article>
+        <article>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A nam, quasi
+          culpa atque nemo dolorem optio ratione asperiores sed blanditiis?
+        </article>
+      </main>
+      <aside>
+        <div class="first-aside">first aside</div>
+        <div class="second-aside">second aside</div>
+      </aside>
+      <footer class="footer">
+        <h1>This is footer</h1>
+      </footer>
+    </div>
+  </body>
+</html>
